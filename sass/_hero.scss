@@ -18,6 +18,9 @@
         position: relative;
         max-width: 386px;
         text-align: start;
+        span{
+            display: block;
+        }
         img{
             position: absolute;
             bottom: 15%;
@@ -101,6 +104,7 @@
             font-size: 24px;
             line-height: 36px;
             padding: 22px 78px;
+            border-radius: 5px;
         }
     }
 }
@@ -109,26 +113,98 @@
     .hero{
         &__context{
             min-width: 40%;
+            gap: 25px;
         }
         &__img{
-            min-width: 352px;
+            max-width: 352px;
         }
         &__title{
             font-size: 36px;
             line-height: 45px; 
             img{
-                right: 15%;
+                right: -5%;
+                width: 59px;
             }
         }
         &__text{
             font-size: 16px;
             line-height: 24px;
-            max-width: 335px;
+            min-width: 335px;
+            margin-bottom: 7px;
         }
         &__btn{
             font-size: 18px;
             line-height: 27px;
             padding: 19px 67px;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .hero{
+        &__context{
+            width: 100%;
+            align-items: center;
+        }
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__title{
+            min-width: 491px;
+            font-size: 34px;
+            span{
+                display: inline;
+            }
+            img{
+                display: none;
+            }
+        }
+        &__text{
+            font-size: 16px;
+            text-align: center;
+            span{
+                display: block;
+            }
+        }
+        &__img{
+            order: 1;
+            min-width: 424px;
+        }
+        &__context{
+            order: 2;
+        }
+        &__btn{
+            padding: 24px 101px;
+        }
+    }
+}
+@media (max-width: 495px) {
+    .hero{
+        .container{
+            padding: 0 10px;
+        }
+        &__title{
+            min-width: inherit;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            span{
+                display: inline;
+            }
+        }
+        &__text{
+            min-width: inherit;
+            font-size: 14px;
+            line-height: 21px;
+            span{
+               display: inline;
+            }
+        }
+        &__img{
+            min-width: 300px;
+        }
+        &__btn{
+            width: 100%;
+            padding: 18px 80px;
         }
     }
 }
