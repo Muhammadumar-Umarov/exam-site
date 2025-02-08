@@ -5,6 +5,9 @@
     gap: 18px;
     grid-template-rows: 532px 343px;
     margin-bottom: 100px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleUp 0.8s ease-out forwards;
 
     &_title {
         font-family: poppins600;
@@ -22,6 +25,7 @@
         align-items: center;
         background-color: #f5f5f5;
         padding: 30px 40px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     &__item:nth-child(1) {
@@ -93,6 +97,19 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1380px) {
     .skills {
@@ -169,6 +186,17 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 535px 535px;
 
+        &__item {
+            .skills__img {
+                width: 200px;
+                object-fit: cover;
+            }
+
+            .skills__title {
+                line-height: 70px;
+            }
+        }
+
         &__item:nth-child(1) {
             grid-row: auto;
 
@@ -181,15 +209,48 @@
             .skills__img {
                 min-width: 185px;
                 min-height: 185px;
-                border: 2px solid red;
             }
         }
 
         &__item:nth-child(4) {
             grid-column: auto;
+            display: flex;
+            flex-direction: column;
+
+            .skills__img {
+                order: 1;
+            }
+
+            .skills__body {
+                width: 100%;
+                order: 2;
+            }
         }
     }
 }
+
+@media (max-width: 530px) {
+    .skills {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+
+        &__item {
+            min-height: 473px;
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 80px;
+        }
+
+        &__btn {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}
+
+
 
 
 
