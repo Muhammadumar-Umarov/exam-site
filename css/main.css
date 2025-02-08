@@ -435,7 +435,7 @@ li {
 }
 @media (max-width: 850px) {
   .skills__item {
-    padding: 16px 10px;
+    padding: 20px 10px;
   }
   .skills__title {
     font-size: 22px;
@@ -483,6 +483,11 @@ li {
   .skills__item:nth-child(4) .skills__body {
     width: 100%;
     order: 2;
+  }
+}
+@media (max-width: 600px) {
+  .skills__description {
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 530px) {
