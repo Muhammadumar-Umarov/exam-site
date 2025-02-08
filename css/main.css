@@ -415,6 +415,9 @@ li {
   .skills__item {
     padding: 20px 15px;
   }
+  .skills_title {
+    font-size: 36px;
+  }
   .skills__title {
     font-size: 22px;
   }
@@ -436,6 +439,9 @@ li {
 @media (max-width: 850px) {
   .skills__item {
     padding: 20px 10px;
+  }
+  .skills_title {
+    font-size: 30px;
   }
   .skills__title {
     font-size: 22px;
@@ -497,6 +503,9 @@ li {
   }
   .skills__item {
     min-height: 473px;
+  }
+  .skills_title {
+    font-size: 24px;
   }
   .skills__title {
     font-size: 18px;
